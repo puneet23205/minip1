@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLBIAN'S HELP PORTAL</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showLoginPrompt() {
+            const userId = prompt("Enter User ID:");
+            const password = prompt("Enter Password:");
+            if (userId && password) {
+                alert(`Login details:\nUser  ID: ${userId}\nPassword: ${password}`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>GL BAJAJ</h1>
+            <div class="search-signin">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <button onclick="showLoginPrompt()" class="login-button">Sign In</button>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="home.html" target="content-frame">Home</a></li>
+                <li><a href="resources.html" target="content-frame">Resources</a></li>
+                <li><a href="events.html" target="content-frame">Events</a></li>
+                <li><a href="cgpa_calculator.html" target="content-frame">CGPA Calculator</a></li>
+                <li><a href="faculty.html" target="content-frame">Faculty</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <iframe name="content-frame" src="home.html" frameborder="0" class="content-frame"></iframe>
+    </main>
+</body>
+</html>
